@@ -1,6 +1,8 @@
 {
     "scripts": {
         "dev:css": "sass --watch ./src/scss/:./dist/css/",
-        "dev:js": "tsc"
+        "dev:js": "tsc -w",
+        "build:css": "sass ./src/scss/:./dist/css/",
+        "build:js": "tsc"
     }
 }
