@@ -52,8 +52,8 @@
     }
 
     .dropdown-divider {
-      border-color: var(--color-background-active);
-      border-width: 1px;
+      border: none;
+      border-top: 1px solid var(--color-background-active);
       margin: 4px 8px;
       transform: translateY(var(--0-height));
     }
