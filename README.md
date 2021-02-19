@@ -2,10 +2,16 @@
 
 ## Develop
 
+Install dependencies:
+
 ```sh
 npm install -g sass
+npm install -g typescript
+```
+
+Run these two commands at the same time:
+
+```sh
 npm run dev:css
-# or with yarn
-yarn global add sass
-yarn run dev:css
+npm run dev:js
 ```
