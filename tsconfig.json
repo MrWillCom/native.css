@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/js/",
+        "rootDir": "./src/ts/",
+        "watch": true,
+        "target": "ES5"
+    }
+}

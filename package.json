@@ -1,5 +1,6 @@
 {
     "scripts": {
-        "dev:css": "sass --watch ./src/scss/:./dist/css/"
+        "dev:css": "sass --watch ./src/scss/:./dist/css/",
+        "dev:js": "tsc"
     }
 }

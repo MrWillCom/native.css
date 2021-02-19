@@ -2,9 +2,9 @@
     class Doc {
         body = document.body;
         get platform() {
-            this.body.getAttribute("data-platform")
+            return this.body.getAttribute("data-platform")
         }
-        set platform(platform) {
+        set platform(platform: string) {
             this.body.setAttribute("data-platform", platform)
         }
     }
@@ -25,7 +25,7 @@
             break;
 
         default:
-            doc.platform = "unknown";
+            doc.platform = "darwin";
             break;
     }
 })()

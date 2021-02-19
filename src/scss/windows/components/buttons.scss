@@ -1,3 +1,8 @@
+// Buttons
+//
+// References
+// https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons (Buttons - UWP applications | Microsoft Docs)
+
 [data-platform="win32"] {
   .btn {
     color: var(--color-text-secondary);
@@ -7,6 +12,7 @@
     outline: none;
     border: none;
     padding: 0;
+    margin: 4px 0;
     font-size: 14px;
     padding: 6px 8px;
     user-select: none;
