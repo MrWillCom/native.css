@@ -20,6 +20,10 @@
             doc.platform = "win32";
             break;
 
+        case "Linux x86_64":
+            doc.platform = "linux";
+            break;
+
         default:
             doc.platform = "unknown";
             break;

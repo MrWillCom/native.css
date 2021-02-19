@@ -1,4 +1,24 @@
 [data-platform="win32"] {
   --color-background-primary: #fff;
+  --color-background-secondary: #cccccc;
+  --color-background-hover: #e6e6e6;
+  --color-background-active: #999999;
+
   --color-text-primary: #000;
+  --color-text-secondary: #222;
+
+  --color-primary: #0078d4;
+  --color-primary-hover: #0091f8;
+  --color-primary-active: #0067c0;
+  --color-primary-in-text: #fff;
+
+  @media (prefers-color-scheme: dark) {
+    --color-background-primary: #000;
+    --color-background-secondary: #2f2f2f;
+    --color-background-hover: #191919;
+    --color-background-active: #666666;
+
+    --color-text-primary: #fff;
+    --color-text-secondary: #d8d8d8;
+  }
 }
