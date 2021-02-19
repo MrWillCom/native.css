@@ -25,7 +25,7 @@
             break;
 
         default:
-            doc.platform = "darwin";
+            doc.platform = "win32";
             break;
     }
 })()
