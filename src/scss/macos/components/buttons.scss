@@ -1,0 +1,16 @@
+[data-platform="darwin"]{
+    .btn{
+        background-color: var(--color-background-secondary);
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        box-shadow: var(--shadow-btn-primary);
+        padding: 4px 8px;
+
+        &:active{
+            background-image: var(--color-primary-image);
+            color: var(--color-primary-image-in-text);
+            box-shadow: none;
+        }
+    }
+}

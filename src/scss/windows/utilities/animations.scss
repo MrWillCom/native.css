@@ -1,3 +1,4 @@
 [data-platform="win32"] {
-  --animation-curve-primary: cubic-bezier(0, 0, 0, 1);
+  --animation-duration-primary: 0.4s;
+  --animation-curve-primary: cubic-bezier(0, 1, 0.3, 1);
 }

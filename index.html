@@ -15,26 +15,30 @@
 </head>
 
 <body data-platform="win32">
+    <h1>Native.css</h1>
     <h2>Components</h2>
     <h3>Buttons</h3>
     <button class="btn">Standard button</button>
     <button class="btn btn-primary">Primary button</button>
     <h3>Dropdowns</h3>
-    <button class="btn" id="toggle-dropdown">Toggle dropdown</button>
-    <div class="dropdown-menu" id="dropdown-menu">
-        <li><a href="#" class="dropdown-item">tag a</a></li>
-        <li><button class="dropdown-item">tag button</button></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><button class="dropdown-item">tag button</button></li>
+    <div class="dropdown">
+        <button class="btn" id="toggle-dropdown">Toggle dropdown</button>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <li><a href="#" class="dropdown-item">tag a</a></li>
+            <li><button class="dropdown-item">tag button</button></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><button class="dropdown-item">tag button</button></li>
+        </div>
     </div>
     <script src="/dist/js/main.js"></script>
     <script src="/dist/js/windows/components/dropdowns.js"></script>
     <script>
-        document.getElementById("toggle-dropdown").addEventListener("click", () => {
-            document.getElementById("dropdown-menu").toggle();
+        document.getElementById("toggle-dropdown").addEventListener("click", (ev) => {
+            document.getElementById("dropdown-menu").toggle(ev);
         })
     </script>
 </body>
 
 </html>
-
