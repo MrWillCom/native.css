@@ -1,5 +1,18 @@
 [data-platform="win32"] {
   background-color: var(--color-background-primary);
   color: var(--color-text-primary);
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
+
+  a:link, a:visited {
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--color-text-disabled);
+    }
+    &:active {
+      color: var(--color-text-clicked);
+    }
+  }
 }
