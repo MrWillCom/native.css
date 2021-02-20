@@ -1,4 +1,4 @@
-(() => {
+(NativeCSS.platform == "win32" ? () => {
     var el = document.querySelectorAll(".dropdown-menu");
     for (let i = 0; i < el.length; i++) {
         var e = el[i];
@@ -12,7 +12,7 @@
         updateHeight();
         window.addEventListener("resize", updateHeight)
 
-        e["__proto__"].isOpen = false;
+        e["__proto__"].isOpen = e.classList.contains("open");
 
         e["__proto__"].open = (ev: MouseEvent) => {
             (e as HTMLElement).style.setProperty("--clicked-item-height", `${(ev.target as HTMLElement).clientHeight + 4}px`);
@@ -33,4 +33,4 @@
             }
         }
     }
-})()
+} : () => { })()

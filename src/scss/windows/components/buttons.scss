@@ -23,16 +23,26 @@
     &:active {
       background-color: var(--color-background-active);
     }
-  }
-  .btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-primary-in-text);
-    &:hover,
-    &:focus {
-      background-color: var(--color-primary-hover);
+
+    &.disabled {
+      color: var(--color-text-disabled);
+      pointer-events: none;
     }
-    &:active {
-      background-color: var(--color-primary-active);
+
+    &.btn-primary {
+      background-color: var(--color-primary);
+      color: var(--color-primary-in-text);
+      &:hover,
+      &:focus {
+        background-color: var(--color-primary-hover);
+      }
+      &:active {
+        background-color: var(--color-primary-active);
+      }
+
+      &.disabled {
+        color: var(--color-primary-disabled-in-text);
+      }
     }
   }
 }

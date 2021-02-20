@@ -1,5 +1,5 @@
-(() => {
-    class Doc {
+var NativeCSS = (() => {
+    class Controller {
         body = document.body;
         get platform() {
             return this.body.getAttribute("data-platform")
@@ -8,24 +8,26 @@
             this.body.setAttribute("data-platform", platform)
         }
     }
-    var doc = new Doc();
+    var controller = new Controller();
 
     // Platform detector
     switch (navigator.platform) {
         case "MacIntel":
-            doc.platform = "darwin";
+            controller.platform = "darwin";
             break;
 
         case "Win32":
-            doc.platform = "win32";
+            controller.platform = "win32";
             break;
 
         case "Linux x86_64":
-            doc.platform = "linux";
+            controller.platform = "linux";
             break;
 
         default:
-            doc.platform = "win32";
+            controller.platform = "win32";
             break;
     }
+
+    return controller;
 })()

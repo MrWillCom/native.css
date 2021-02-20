@@ -16,10 +16,14 @@
 
 <body data-platform="win32">
     <h1>Native.css</h1>
+
     <h2>Components</h2>
+
     <h3>Buttons</h3>
     <button class="btn">Standard button</button>
     <button class="btn btn-primary">Primary button</button>
+    <button class="btn disabled">Standard button</button>
+
     <h3>Dropdowns</h3>
     <div class="dropdown">
         <button class="btn" id="toggle-dropdown">Toggle dropdown</button>
@@ -32,7 +36,12 @@
             <li><button class="dropdown-item">tag button</button></li>
         </div>
     </div>
+
+    <h3>Links</h3>
+    <a href="https://github.com/MrWillCom/native.css">Go to GitHub</a>
+
     <script src="/dist/js/main.js"></script>
+    <script src="/dist/js/macos/components/dropdowns.js"></script>
     <script src="/dist/js/windows/components/dropdowns.js"></script>
     <script>
         document.getElementById("toggle-dropdown").addEventListener("click", (ev) => {

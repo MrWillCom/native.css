@@ -7,11 +7,13 @@
 
   --color-text-primary: #000;
   --color-text-secondary: #222;
+  --color-text-disabled: #888;
 
   --color-primary: #0078d4;
   --color-primary-hover: #0091f8;
   --color-primary-active: #0067c0;
   --color-primary-in-text: #fff;
+  --color-primary-disabled-in-text: #94d1ff;
 
   @media (prefers-color-scheme: dark) {
     --color-background-primary: #000;

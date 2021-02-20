@@ -1,11 +1,35 @@
 [data-platform="darwin"] {
   --color-background-primary: #fcfcfa;
   --color-background-secondary: #fff;
+  --color-background-block: #eeeeee;
 
   --color-text-primary: #1a1a1a;
 
-  --color-primary-image: linear-gradient(90deg, #004fec, #0042f1);
-  --color-primary-image-in-text: #e7f6ff;
+  --color-border-primary: rgba(0, 0, 0, 15%);
+
+  --color-primary: #3897fe;
+  --color-primary-in-text: #fff;
+  --color-primary-image: linear-gradient(180deg, #65affa, #0e81ff);
+  --color-primary-image-in-text: #fff;
+  --color-primary-image-active: linear-gradient(180deg, #3c9dff, #006de4);
 
   --color-btn-border-bottom: #0003;
+
+  @media (prefers-color-scheme: dark) {
+    --color-background-primary: #424344;
+    --color-background-secondary: #565656;
+    --color-background-block: #323232;
+
+    --color-text-primary: #e2e2e2;
+
+    --color-border-primary: rgba(0, 0, 0, 15%);
+
+    --color-primary: #3897fe;
+    --color-primary-in-text: #fff;
+    --color-primary-image: linear-gradient(180deg, #155ed1, #155ed1);
+    --color-primary-image-in-text: #fff;
+    --color-primary-image-active: linear-gradient(180deg, #3c9dff, #006de4);
+
+    --color-btn-border: #676767;
+  }
 }
