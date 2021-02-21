@@ -9,6 +9,10 @@
     color: var(--color-text-primary);
     padding: 8px;
 
+    &.close {
+      display: none;
+    }
+
     .alert-title {
       font-size: 16px;
       font-weight: 600;

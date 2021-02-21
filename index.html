@@ -41,22 +41,26 @@
     <a href="https://github.com/MrWillCom/native.css">Go to GitHub</a>
 
     <h3>Alerts</h3>
-    <div class="alert">
-        <button class="btn btn-close alert-close">
+    <div class="alert" id="alert">
+        <button class="btn alert-close" data-nc-onclick="auto" id="close-alert">
             <svg class="bi" width="28" height="28" fill="currentColor">
                 <use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#x" />
             </svg>
         </button>
         <h2 class="alert-title">Standard Alert</h2>
-        <p class="alert-desc">This is a demo alert by Native.css.</p>
+        <p class="alert-desc">This is a demo alert by Native.css. Also, this alert will appear again 3s after you close it so that you can test it for many times.</p>
     </div>
 
     <script src="/dist/js/main.js"></script>
     <script src="/dist/js/macos/components/dropdowns.js"></script>
     <script src="/dist/js/windows/components/dropdowns.js"></script>
+    <script src="/dist/js/windows/components/alerts.js"></script>
     <script>
         document.getElementById("toggle-dropdown").addEventListener("click", (ev) => {
             document.getElementById("dropdown-menu").toggle(ev);
+        })
+        document.getElementById("close-alert").addEventListener("click", (ev) => {
+            setTimeout(() => { document.getElementById("alert").classList.remove("close"); }, 3000)
         })
     </script>
 </body>
