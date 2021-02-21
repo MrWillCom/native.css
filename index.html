@@ -9,12 +9,34 @@
     <link rel="stylesheet" href="/dist/css/native.css">
     <style>
         body {
-            padding: 32px;
+            padding: 64px;
         }
     </style>
 </head>
 
 <body data-platform="win32">
+    <nav class="navbar navbar-left">
+        <ul class="navbar-nav" data-nc-nav-highlight="auto">
+            <li class="nav-item navbar-expand-btn">
+                <svg class="bi" width="28" height="28" fill="currentColor">
+                    <use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#list" />
+                </svg>
+            </li>
+            <li class="nav-item active">Home</li>
+            <li class="nav-item">Source</li>
+            <li class="nav-item">About</li>
+        </ul>
+        <ul class="navbar-nav navbar-trailing dropdown">
+            <li class="nav-item" id="settings-btn">Settings</li>
+            <div class="dropdown-menu" id="settings-menu">
+                <li><button class="dropdown-item" onclick="NativeCSS.platform = 'win32'">Set platform to win32</button>
+                </li>
+                <li><button class="dropdown-item" onclick="NativeCSS.platform = 'darwin'">Set platform to
+                        darwin</button></li>
+            </div>
+        </ul>
+    </nav>
+
     <h1>Native.css</h1>
 
     <h2>Components</h2>
@@ -48,19 +70,26 @@
             </svg>
         </button>
         <h2 class="alert-title">Standard Alert</h2>
-        <p class="alert-desc">This is a demo alert by Native.css. Also, this alert will appear again 3s after you close it so that you can test it for many times.</p>
+        <p class="alert-desc">This is a demo alert by Native.css. Also, this alert will appear again 3s after you close
+            it so that you can test it for many times.</p>
     </div>
 
     <script src="/dist/js/main.js"></script>
     <script src="/dist/js/macos/components/dropdowns.js"></script>
     <script src="/dist/js/windows/components/dropdowns.js"></script>
     <script src="/dist/js/windows/components/alerts.js"></script>
+    <script src="/dist/js/windows/components/navbar.js"></script>
     <script>
         document.getElementById("toggle-dropdown").addEventListener("click", (ev) => {
-            document.getElementById("dropdown-menu").toggle(ev);
+            document.getElementById("dropdown-menu").classList.toggle("open");
+            document.getElementById("dropdown-menu").style.setProperty("--clicked-item-height", ev.target.clientHeight);
         })
         document.getElementById("close-alert").addEventListener("click", (ev) => {
             setTimeout(() => { document.getElementById("alert").classList.remove("close"); }, 3000)
+        })
+        document.getElementById("settings-btn").addEventListener("click", (ev) => {
+            document.getElementById("settings-menu").classList.toggle("open");
+            document.getElementById("settings-menu").style.setProperty("--clicked-item-height", ev.target.clientHeight);
         })
     </script>
 </body>

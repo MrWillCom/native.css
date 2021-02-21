@@ -9,7 +9,7 @@
     width: min-content;
     padding: 0 0;
     background-color: var(--color-background-hover-with-transparency-primary);
-    backdrop-filter: blur(32px);
+    backdrop-filter: var(--filter-blur-primary);
     border-radius: 4px;
     list-style: none;
     height: 0px;
@@ -75,7 +75,7 @@
     .dropdown-menu {
       position: absolute;
       inset: 0px auto auto 0px;
-      transform: translate(0px, var(--clicked-item-height));
+      transform: translate(0px, calc(var(--clicked-item-height) * 1px + 4px));
     }
   }
 }
