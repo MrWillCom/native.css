@@ -1,4 +1,6 @@
-var NativeCSS = (() => {
+/// <reference path = "main.d.ts" />
+
+window.NativeCSS = (() => {
     class Controller {
         body = document.body;
         get platform() {

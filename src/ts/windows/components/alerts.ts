@@ -1,4 +1,4 @@
-(NativeCSS.platform == "win32" ? () => {
+(window.NativeCSS.platform == "win32" ? () => {
     var el = document.querySelectorAll(".alert-close[data-nc-onclick=auto]");
     for (let i = 0; i < el.length; i++) {
         const e = el[i];

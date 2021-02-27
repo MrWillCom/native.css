@@ -1,4 +1,4 @@
-(NativeCSS.platform == "win32" ? () => {
+(window.NativeCSS.platform == "win32" ? () => {
     var el = document.querySelectorAll(".navbar-nav[data-nc-nav-highlight=auto]");
     for (let i = 0; i < el.length; i++) {
         var e = el[i];
