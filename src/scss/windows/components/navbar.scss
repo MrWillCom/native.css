@@ -1,12 +1,12 @@
 // Navbar
 //
 // References
-// https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/infobar
+// https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/infobar
 
 [data-platform="win32"] {
   .navbar {
     background-color: var(--color-background-hover-with-transparency-primary);
-    backdrop-filter: var(--filter-blur-primary);
+    backdrop-filter: var(--filter-blur-large);
     z-index: 100;
 
     .navbar-nav {
@@ -75,7 +75,7 @@
       overflow: hidden;
       transition-property: width, box-shadow;
       transition-duration: var(--animation-duration-short);
-      transition-timing-function: var(--animation-curve-primary);
+      transition-timing-function: var(--animation-curve-decelerate);
 
       &.expanded {
         width: 320px;

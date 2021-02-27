@@ -1,7 +1,7 @@
 // Dropdowns
 //
 // References
-// https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button (Buttons - UWP applications | Microsoft Docs)
+// https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button (Buttons - UWP applications | Microsoft Docs)
 
 [data-platform="win32"] {
   .dropdown-menu {
@@ -25,17 +25,17 @@
       padding: 6px 0;
       opacity: 1;
       pointer-events: initial;
-      border-color: var(--color-background-secondary);
+      border-color: var(--color-border-primary);
       box-shadow: var(--shadow-flyout-primary);
       transition: var(--animation-duration-primary)
-        var(--animation-curve-primary);
+        var(--animation-curve-decelerate);
       transition-property: height, box-shadow;
 
       .dropdown-item,
       .dropdown-divider {
         transform: translateY(0);
         transition: transform var(--animation-duration-primary)
-          var(--animation-curve-primary);
+          var(--animation-curve-decelerate);
       }
     }
 
@@ -55,9 +55,11 @@
 
       &:hover,
       &:focus {
+        color: var(--color-text-secondary);
         background-color: var(--color-background-block);
       }
       &:active {
+        color: var(--color-text-secondary);
         background-color: var(--color-background-active);
       }
     }

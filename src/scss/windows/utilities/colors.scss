@@ -19,6 +19,8 @@
   --color-primary-in-text: #fff;
   --color-primary-disabled-in-text: #94d1ff;
 
+  --color-border-primary: #cccccc;
+
   @media (prefers-color-scheme: dark) {
     --color-background-primary: #000;
     --color-background-secondary: #2f2f2f;
@@ -31,5 +33,7 @@
 
     --color-text-primary: #fff;
     --color-text-secondary: #d8d8d8;
+
+    --color-border-primary: #101010;
   }
 }

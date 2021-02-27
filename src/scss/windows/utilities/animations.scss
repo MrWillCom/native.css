@@ -1,6 +1,12 @@
-[data-platform="win32"] {
-  --animation-duration-short: 0.1s;
-  --animation-duration-primary: 0.4s;
+// Animations Utilities
+// 
+// References
+// https://docs.microsoft.com/windows/uwp/design/motion/timing-and-easing
 
-  --animation-curve-primary: cubic-bezier(0, 1, 0.3, 1);
+[data-platform="win32"] {
+  --animation-duration-short: 0.15s;
+  --animation-duration-primary: 0.3s;
+
+  --animation-curve-decelerate: cubic-bezier(0.1 , 0.9 , 0.2 , 1);
+  --animation-curve-accelerate: cubic-bezier(0.7 , 0 , 1 , 0.5);
 }
