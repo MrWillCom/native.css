@@ -7,18 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Native.css</title>
     <link rel="stylesheet" href="/dist/css/native.css">
-    <style>
-        body {
-            padding: 64px;
-        }
-    </style>
 </head>
 
 <body data-platform="win32">
     <nav class="navbar navbar-left">
         <ul class="navbar-nav" data-nc-nav-highlight="auto">
             <li class="nav-item navbar-expand-btn">
-                <svg class="bi" width="28" height="28" fill="currentColor">
+                <svg class="bi" width="28" height="28" fill="currentColor" style="pointer-events: none;">
                     <use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#list" />
                 </svg>
             </li>
@@ -37,41 +32,44 @@
         </ul>
     </nav>
 
-    <h1>Native.css</h1>
+    <div class="container">
+        <h1>Native.css</h1>
 
-    <h2>Components</h2>
+        <h2>Components</h2>
 
-    <h3>Buttons</h3>
-    <button class="btn">Standard button</button>
-    <button class="btn btn-primary">Primary button</button>
-    <button class="btn disabled">Disabled button</button>
+        <h3>Buttons</h3>
+        <button class="btn">Standard button</button>
+        <button class="btn btn-primary">Primary button</button>
+        <button class="btn disabled">Disabled button</button>
 
-    <h3>Dropdowns</h3>
-    <div class="dropdown">
-        <button class="btn" id="toggle-dropdown">Toggle dropdown</button>
-        <div class="dropdown-menu" id="dropdown-menu">
-            <li><a href="#" class="dropdown-item">tag a</a></li>
-            <li><button class="dropdown-item">tag button</button></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><button class="dropdown-item">tag button</button></li>
+        <h3>Dropdowns</h3>
+        <div class="dropdown">
+            <button class="btn" id="toggle-dropdown">Toggle dropdown</button>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <li><a href="#" class="dropdown-item">tag a</a></li>
+                <li><button class="dropdown-item">tag button</button></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><button class="dropdown-item">tag button</button></li>
+            </div>
         </div>
-    </div>
 
-    <h3>Links</h3>
-    <a href="https://github.com/MrWillCom/native.css">Go to GitHub</a>
+        <h3>Links</h3>
+        <a href="https://github.com/MrWillCom/native.css">Go to GitHub</a>
 
-    <h3>Alerts</h3>
-    <div class="alert" id="alert">
-        <button class="btn alert-close" data-nc-onclick="auto" id="close-alert">
-            <svg class="bi" width="28" height="28" fill="currentColor">
-                <use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#x" />
-            </svg>
-        </button>
-        <h2 class="alert-title">Standard Alert</h2>
-        <p class="alert-desc">This is a demo alert by Native.css. Also, this alert will appear again 3s after you close
-            it so that you can test it for many times.</p>
+        <h3>Alerts</h3>
+        <div class="alert" id="alert">
+            <button class="btn alert-close" data-nc-onclick="auto" id="close-alert">
+                <svg class="bi" width="28" height="28" fill="currentColor">
+                    <use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#x" />
+                </svg>
+            </button>
+            <h2 class="alert-title">Standard Alert</h2>
+            <p class="alert-desc">This is a demo alert by Native.css. Also, this alert will appear again 3s after you
+                close
+                it so that you can test it for many times.</p>
+        </div>
     </div>
 
     <script src="/dist/js/main.js"></script>

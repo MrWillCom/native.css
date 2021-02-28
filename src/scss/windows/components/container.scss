@@ -1,0 +1,12 @@
+// Container
+
+[data-platform="win32"] {
+  .container {
+    margin: 0;
+    margin-top: var(--container-margin-top);
+    margin-right: var(--container-margin-right);
+    margin-bottom: var(--container-margin-bottom);
+    margin-left: var(--container-margin-left);
+    padding: 32px 16px 16px 16px;
+  }
+}
