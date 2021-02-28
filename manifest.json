@@ -1,0 +1,8 @@
+{
+    "short_name": "Native.css",
+    "name": "Native.css",
+    "start_url": "/",
+    "background_color": "#0078D4",
+    "theme_color": "#0078D4",
+    "display":"fullscreen"
+}
