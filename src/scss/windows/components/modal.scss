@@ -1,0 +1,16 @@
+// Modal
+// 
+// References
+// https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/dialogs
+
+[data-platform="win32"] {
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #0005;
+        z-index: 200;
+    }
+}
