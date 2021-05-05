@@ -1,16 +1,46 @@
 // Modal
-// 
+//
 // References
 // https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/dialogs
 
 [data-platform="win32"] {
-    .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #0005;
-        z-index: 200;
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: var(--animation-duration-primary)
+      var(--animation-curve-decelerate);
+    transition-property: background-color;
+
+    &.show {
+      background-color: var(--color-background-mask);
+      pointer-events: initial;
+
+      .modal-dialog {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
+  }
+
+  .modal-dialog {
+    background-color: var(--color-background-primary);
+    border: 1px solid var(--color-border-secondary);
+    padding: 20px;
+    box-shadow: var(--shadow-flyout-primary);
+    transition: var(--animation-duration-primary)
+      var(--animation-curve-decelerate);
+    transition-property: opacity, transform;
+
+    opacity: 0;
+    transform: scale(1.05);
+  }
 }

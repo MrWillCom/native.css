@@ -1,7 +1,9 @@
 [data-platform="win32"] {
   --shadow-flyout-primary: 0 10px 20px #0004;
+  --shadow-modal-primary: 0 6px 12px #0006;
 
   @media (prefers-color-scheme: dark) {
     --shadow-flyout-primary: 0 10px 20px #0008;
+    --shadow-modal-primary: 0 6px 12px #0006;
   }
 }

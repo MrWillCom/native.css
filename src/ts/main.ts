@@ -9,27 +9,21 @@ window.NativeCSS = (() => {
         set platform(platform: string) {
             this.body.setAttribute("data-platform", platform)
         }
+        supportedPlatforms = ["darwin", "win32", "linux"];
+        detectPlatform() {
+            switch (navigator.platform) {
+                case "MacIntel":
+                    return "darwin";
+                case "Win32":
+                    return "win32";
+                case "Linux x86_64":
+                    return "linux";
+                default:
+                    return "win32";
+            }
+        }
     }
     var controller = new Controller();
-
-    // Platform detector
-    switch (navigator.platform) {
-        case "MacIntel":
-            controller.platform = "darwin";
-            break;
-
-        case "Win32":
-            controller.platform = "win32";
-            break;
-
-        case "Linux x86_64":
-            controller.platform = "linux";
-            break;
-
-        default:
-            controller.platform = "win32";
-            break;
-    }
 
     return controller;
 })()

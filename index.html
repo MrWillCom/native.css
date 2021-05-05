@@ -71,6 +71,15 @@
                 close
                 it so that you can test it for many times.</p>
         </div>
+
+        <h3>Modal</h3>
+        <button class="btn btn-primary" id="toggle-modal">Toggle Modal</button>
+        <div class="modal" id="modal">
+            <div class="modal-dialog">
+                <h4>Modal</h4>
+                <button class="btn btn-primary" id="close-modal">Close</button>
+            </div>
+        </div>
     </div>
 
     <script src="/dist/js/main.js"></script>
@@ -79,6 +88,7 @@
     <script src="/dist/js/windows/components/alerts.js"></script>
     <script src="/dist/js/windows/components/navbar.js"></script>
     <script>
+        NativeCSS.platform = NativeCSS.detectPlatform();
         document.getElementById("toggle-dropdown").addEventListener("click", (ev) => {
             document.getElementById("dropdown-menu").classList.toggle("open");
             document.getElementById("dropdown-menu").style.setProperty("--clicked-item-height", ev.target.clientHeight);
@@ -89,6 +99,12 @@
         document.getElementById("settings-btn").addEventListener("click", (ev) => {
             document.getElementById("settings-menu").classList.toggle("open");
             document.getElementById("settings-menu").style.setProperty("--clicked-item-height", ev.target.clientHeight);
+        })
+        document.getElementById("toggle-modal").addEventListener("click", (ev) => {
+            document.getElementById("modal").classList.toggle("show");
+        })
+        document.getElementById("close-modal").addEventListener("click", (ev) => {
+            document.getElementById("modal").classList.remove("show");
         })
     </script>
 </body>
