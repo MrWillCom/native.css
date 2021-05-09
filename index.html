@@ -91,12 +91,12 @@
         NativeCSS.platform = NativeCSS.detectPlatform();
 
         var demos = {
-            alert: new NativeCSS.Alert(document.getElementById("alert"))
+            dropdown: new NativeCSS.Dropdown(document.getElementById("dropdown-menu")),
+            alert: new NativeCSS.Alert(document.getElementById("alert")),
         }
 
         document.getElementById("toggle-dropdown").addEventListener("click", (ev) => {
-            document.getElementById("dropdown-menu").classList.toggle("open");
-            document.getElementById("dropdown-menu").style.setProperty("--clicked-item-height", ev.target.clientHeight);
+            demos.dropdown.toggle(ev.target);
         })
         document.getElementById("close-alert").addEventListener("click", (ev) => {
             demos.alert.hide();

@@ -3,5 +3,6 @@ interface Window {
         platform: string,
         detectPlatform: () => string,
         Alert?: Function,
+        Dropdown?: Function,
     };
 }
