@@ -60,7 +60,7 @@
         <a href="https://github.com/MrWillCom/native.css">Go to GitHub</a>
 
         <h3>Alerts</h3>
-        <div class="alert" id="alert">
+        <div class="alert show" id="alert">
             <button class="btn alert-close" data-nc-onclick="auto" id="close-alert">
                 <svg class="bi" width="28" height="28" fill="currentColor">
                     <use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#x" />
@@ -94,7 +94,7 @@
             document.getElementById("dropdown-menu").style.setProperty("--clicked-item-height", ev.target.clientHeight);
         })
         document.getElementById("close-alert").addEventListener("click", (ev) => {
-            setTimeout(() => { document.getElementById("alert").classList.remove("close"); }, 3000)
+            setTimeout(() => { document.getElementById("alert").classList.add("show"); }, 3000)
         })
         document.getElementById("settings-btn").addEventListener("click", (ev) => {
             document.getElementById("settings-menu").classList.toggle("open");

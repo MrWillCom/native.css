@@ -8,9 +8,10 @@
     background-color: var(--color-background-popup);
     color: var(--color-text-primary);
     padding: 8px;
+    display: none;
 
-    &.close {
-      display: none;
+    &.show {
+      display: block;
     }
 
     .alert-title {

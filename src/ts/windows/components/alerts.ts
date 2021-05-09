@@ -12,7 +12,7 @@
         }
         e.addEventListener("click", () => {
             if (window.NativeCSS.platform == "win32") {
-                currentEl.classList.add("close");
+                currentEl.classList.remove("show");
             }
         })
     }
