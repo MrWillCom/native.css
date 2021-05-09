@@ -61,7 +61,7 @@
 
         <h3>Alerts</h3>
         <div class="alert show" id="alert">
-            <button class="btn alert-close" data-nc-onclick="auto" id="close-alert">
+            <button class="btn alert-close" id="close-alert">
                 <svg class="bi" width="28" height="28" fill="currentColor">
                     <use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#x" />
                 </svg>
@@ -89,12 +89,18 @@
     <script src="/dist/js/windows/components/navbar.js"></script>
     <script>
         NativeCSS.platform = NativeCSS.detectPlatform();
+
+        var demos = {
+            alert: new NativeCSS.Alert(document.getElementById("alert"))
+        }
+
         document.getElementById("toggle-dropdown").addEventListener("click", (ev) => {
             document.getElementById("dropdown-menu").classList.toggle("open");
             document.getElementById("dropdown-menu").style.setProperty("--clicked-item-height", ev.target.clientHeight);
         })
         document.getElementById("close-alert").addEventListener("click", (ev) => {
-            setTimeout(() => { document.getElementById("alert").classList.add("show"); }, 3000)
+            demos.alert.hide();
+            setTimeout(() => { demos.alert.show(); }, 3000)
         })
         document.getElementById("settings-btn").addEventListener("click", (ev) => {
             document.getElementById("settings-menu").classList.toggle("open");

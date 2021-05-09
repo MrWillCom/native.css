@@ -1,19 +1,24 @@
 (() => {
-    var el = document.querySelectorAll(".alert-close[data-nc-onclick=auto]");
-    for (let i = 0; i < el.length; i++) {
-        const e = el[i];
-        var foundAlertRootEl = false;
-        var currentEl = e;
-        while (!foundAlertRootEl) {
-            if (currentEl.parentElement.classList.contains("alert")) {
-                foundAlertRootEl = true;
-            }
-            currentEl = currentEl.parentElement;
+    class Alert {
+        constructor(el: HTMLElement) {
+            this.el = el;
         }
-        e.addEventListener("click", () => {
-            if (window.NativeCSS.platform == "win32") {
-                currentEl.classList.remove("show");
-            }
-        })
+        el: HTMLElement
+        show() {
+            this.el.classList.add("show")
+        }
+        hide() {
+            this.el.classList.remove("show")
+        }
+        toggle() {
+            this.el.classList.toggle("show")
+        }
+        isShown() {
+            return this.el.classList.contains("show")
+        }
+        isHidden() {
+            return !this.el.classList.contains("show")
+        }
     }
+    window.NativeCSS.Alert = Alert;
 })()
