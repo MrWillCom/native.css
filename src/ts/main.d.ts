@@ -4,5 +4,6 @@ interface Window {
         detectPlatform: () => string,
         Alert?: Function,
         Dropdown?: Function,
+        Navbar?: Function,
     };
 }

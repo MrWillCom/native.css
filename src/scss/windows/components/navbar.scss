@@ -78,7 +78,7 @@
       transition-duration: var(--animation-duration-short);
       transition-timing-function: var(--animation-curve-decelerate);
 
-      &.expanded {
+      &.show {
         width: 320px;
         box-shadow: var(--shadow-flyout-primary);
         transition-duration: var(--animation-duration-primary);
