@@ -15,16 +15,16 @@
         registerUpdateHeightEvent() {
             window.addEventListener("resize", this.updateHeight);
         }
-        show(clickedEl) {
+        show(clickedEl?: HTMLElement) {
             this.el.classList.add("show")
-            this.el.style.setProperty("--clicked-item-height", clickedEl.clientHeight);
+            this.el.style.setProperty("--clicked-item-height", clickedEl.clientHeight.toString());
         }
         hide() {
             this.el.classList.remove("show")
         }
-        toggle(clickedEl) {
+        toggle(clickedEl?: HTMLElement) {
             this.el.classList.toggle("show")
-            this.el.style.setProperty("--clicked-item-height", clickedEl.clientHeight);
+            this.el.style.setProperty("--clicked-item-height", clickedEl.clientHeight.toString());
         }
         isShown() {
             return this.el.classList.contains("show")
