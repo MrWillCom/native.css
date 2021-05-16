@@ -11,7 +11,7 @@
 </head>
 
 <body data-platform="win32">
-    <nav class="navbar navbar-left">
+    <nav class="navbar navbar-left" id="navbar">
         <ul class="navbar-nav" data-nc-nav-highlight="auto">
             <li class="nav-item navbar-expand-btn">
                 <svg class="bi" width="28" height="28" fill="currentColor" style="pointer-events: none;">
@@ -93,6 +93,7 @@
         var demos = {
             dropdown: new NativeCSS.Dropdown(document.getElementById("dropdown-menu")),
             alert: new NativeCSS.Alert(document.getElementById("alert")),
+            navbar: new NativeCSS.Navbar(document.getElementById("navbar")),
         }
 
         document.getElementById("toggle-dropdown").addEventListener("click", (ev) => {
@@ -102,6 +103,8 @@
             demos.alert.hide();
             setTimeout(() => { demos.alert.show(); }, 3000)
         })
+        demos.navbar.getNavbarExpandBtn().addEventListener("click", () => { demos.navbar.toggle() })
+        demos.navbar.setContainerMargin()
         document.getElementById("settings-btn").addEventListener("click", (ev) => {
             document.getElementById("settings-menu").classList.toggle("open");
             document.getElementById("settings-menu").style.setProperty("--clicked-item-height", ev.target.clientHeight);
